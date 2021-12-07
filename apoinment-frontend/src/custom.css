@@ -1,0 +1,2 @@
+/* This overwrite for disabled makes my calendar look good */
+.nice-dates-day.-disabled { color: grey; }

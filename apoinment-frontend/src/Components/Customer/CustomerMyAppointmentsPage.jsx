@@ -8,7 +8,7 @@ import {
 
 
 
-class CustomerBookAppointmentPage extends Component{
+class CustomerMyAppointmentsPage extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -25,13 +25,13 @@ class CustomerBookAppointmentPage extends Component{
           </div>
 
           <div className="w3-col s4 w3-container w3-center">
-              <h8>&nbsp;Book Appointment</h8>
+              <h8>&nbsp;My Appointments</h8>
           </div>
 
           <div className="w3-col s4 w3-container w3-padding">
           </div>
         </div>
-        <h1>Book Appointment</h1>
+        <h1>My Appointments</h1>
       </>
     )
   }
@@ -40,4 +40,4 @@ class CustomerBookAppointmentPage extends Component{
 
 
 
-export default CustomerBookAppointmentPage;
+export default CustomerMyAppointmentsPage;

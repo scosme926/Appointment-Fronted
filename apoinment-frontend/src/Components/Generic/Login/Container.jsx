@@ -3,11 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from "react-router-dom";
+import LoginComponent from "./Component"
 
 
-
-class LoginPage extends Component{
+class LoginContainer extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -18,7 +19,7 @@ class LoginPage extends Component{
   render(){
     return(
       <>
-          <h1>Login</h1>
+          <LoginComponent />
       </>
     )
   }
@@ -27,4 +28,4 @@ class LoginPage extends Component{
 
 
 
-export default LoginPage;
+export default LoginContainer;

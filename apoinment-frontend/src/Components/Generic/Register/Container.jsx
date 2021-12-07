@@ -3,11 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from "react-router-dom";
+import RegisterComponent from "./Component"
 
 
-
-class RegisterPage extends Component{
+class RegisterContainer extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -18,7 +19,7 @@ class RegisterPage extends Component{
   render(){
     return(
       <>
-          <h1>Register</h1>
+          <RegisterComponent />
       </>
     )
   }
@@ -27,4 +28,4 @@ class RegisterPage extends Component{
 
 
 
-export default RegisterPage;
+export default RegisterContainer;
