@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function LoginComponent(props){
   return(
     <>
@@ -21,6 +23,7 @@ export default function LoginComponent(props){
                     <button className="w3-btn w3-black w3-block w3-margin-bottom">Login</button>
                 </p>
             </div>
+            <Link to="/login" className="w3-btn w3-light-grey w3-block">Log in</Link>
         </div>
     </>
   )

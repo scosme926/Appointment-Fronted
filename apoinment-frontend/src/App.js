@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import "./custom.css"
+import "./custom2.css"
 import IndexPage from "./Components/Generic/IndexPage"
 import NotFoundPage from "./Components/Generic/404"
 import LoginContainer from "./Components/Generic/Login/Container"
@@ -20,7 +20,8 @@ import CustomerMyAppointmentsPage from "./Components/Customer/CustomerMyAppointm
 import CustomerBookAppointmentPageOne from "./Components/Customer/BookAppointment/Page1"
 import CustomerBookAppointmentPageTwo from "./Components/Customer/BookAppointment/Page2"
 import CustomerBookAppointmentPageThree from "./Components/Customer/BookAppointment/Page3"
-
+import CustomerBookAppointmentPageFour from "./Components/Customer/BookAppointment/Page4"
+import ProfileContainer from "./Components/Customer/Profile/Container"
 
 
 class App extends Component{
@@ -36,6 +37,8 @@ class App extends Component{
       <>
         <Router>
           <Routes>
+            <Route exact path="/profile" element={<ProfileContainer/>}/>
+            <Route exact path="/book-appointment-4" element={<CustomerBookAppointmentPageFour/>}/>
             <Route exact path="/book-appointment-3" element={<CustomerBookAppointmentPageThree/>}/>
             <Route exact path="/book-appointment-2" element={<CustomerBookAppointmentPageTwo/>}/>
             <Route exact path="/book-appointment-1" element={<CustomerBookAppointmentPageOne/>}/>

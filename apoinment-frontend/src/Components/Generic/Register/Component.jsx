@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function RegisterComponent(props){
   return(
     <>
@@ -31,7 +33,7 @@ export default function RegisterComponent(props){
                 </p>
                 <p className="w3-text-black">
                     <button className="w3-btn w3-black w3-block w3-margin-bottom">Register</button>
-                    {/* <Link to="/login" className="w3-btn w3-light-grey w3-block">Log in</Link>*/}
+                    <Link to="/login" className="w3-btn w3-black w3-block">Log in</Link>
                 </p>
             </div>
        </div>
