@@ -5,6 +5,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import CustomHR from "../Elements/customhr"
+
 
 
 
@@ -50,7 +52,27 @@ class CustomerMyAppointmentsPage extends Component{
               </div>
           </div>
 
-          
+          <div className="w3-padding">
+          <CustomHR />
+          </div>
+
+          <div class="w3-row w3-padding w3-margin w3-border w3-round-large w3-border-black">
+              <div class="w3-col s3 w3-center">
+                  <span>Tuesday<br /> 18 <br /> Nov</span>
+              </div>
+
+              <div class="w3-col s6 w3-center">
+                <div class="w3-border-left w3-border-black w3-center">
+                    <span className="w3-padding w3-panel">Blow-Drying</span>
+                </div>
+              </div>
+
+              <div class="w3-col s3 w3-center">
+                  <br /><span className="w3-pane">10:00 AM</span>
+              </div>
+          </div>
+
+
       </>
     )
   }

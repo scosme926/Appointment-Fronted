@@ -22,6 +22,8 @@ import CustomerBookAppointmentPageTwo from "./Components/Customer/BookAppointmen
 import CustomerBookAppointmentPageThree from "./Components/Customer/BookAppointment/Page3"
 import CustomerBookAppointmentPageFour from "./Components/Customer/BookAppointment/Page4"
 import ProfileContainer from "./Components/Customer/Profile/Container"
+import OwnerAppointmentDetailPage from "./Components/Owner/OwnerAppointmentDetailPage"
+
 
 
 class App extends Component{
@@ -37,6 +39,7 @@ class App extends Component{
       <>
         <Router>
           <Routes>
+            <Route exact path="/owner/appointment-detail/:id" element={<OwnerAppointmentDetailPage/>}/>
             <Route exact path="/profile" element={<ProfileContainer/>}/>
             <Route exact path="/book-appointment-4" element={<CustomerBookAppointmentPageFour/>}/>
             <Route exact path="/book-appointment-3" element={<CustomerBookAppointmentPageThree/>}/>

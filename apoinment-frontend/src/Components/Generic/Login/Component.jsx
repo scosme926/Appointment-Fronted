@@ -22,8 +22,8 @@ export default function LoginComponent(props){
                 <p>
                     <button className="w3-btn w3-black w3-block w3-margin-bottom">Login</button>
                 </p>
-            </div>
-            <Link to="/login" className="w3-btn w3-light-grey w3-block">Log in</Link>
+          </div>
+          <Link to="/login" className="w3-btn w3-light-grey w3-block">Log in</Link>
         </div>
     </>
   )
