@@ -23,7 +23,7 @@ import CustomerBookAppointmentPageThree from "./Components/Customer/BookAppointm
 import CustomerBookAppointmentPageFour from "./Components/Customer/BookAppointment/Page4"
 import ProfileContainer from "./Components/Customer/Profile/Container"
 import OwnerAppointmentDetailPage from "./Components/Owner/OwnerAppointmentDetailPage"
-
+import TestPage from "./Components/Generic/Test"
 
 
 class App extends Component{
@@ -39,15 +39,16 @@ class App extends Component{
       <>
         <Router>
           <Routes>
-            <Route exact path="/owner/appointment-detail/:id" element={<OwnerAppointmentDetailPage/>}/>
+            <Route exact path="/test" element={<TestPage/>}/>
+            <Route exact path="/owner-appointment-detail/:id" element={<OwnerAppointmentDetailPage/>}/>
             <Route exact path="/profile" element={<ProfileContainer/>}/>
             <Route exact path="/book-appointment-4" element={<CustomerBookAppointmentPageFour/>}/>
             <Route exact path="/book-appointment-3" element={<CustomerBookAppointmentPageThree/>}/>
             <Route exact path="/book-appointment-2" element={<CustomerBookAppointmentPageTwo/>}/>
             <Route exact path="/book-appointment-1" element={<CustomerBookAppointmentPageOne/>}/>
             <Route exact path="/my-appointments" element={<CustomerMyAppointmentsPage/>}/>
-            <Route exact path="/owner/previous" element={<OwnerPreviousPage/>}/>
-            <Route exact path="/owner/dashboard" element={<OwnerDashboardPage/>}/>
+            <Route exact path="/owner-previous" element={<OwnerPreviousPage/>}/>
+            <Route exact path="/owner-dashboard" element={<OwnerDashboardPage/>}/>
             <Route exact path="/book-appointment" element={<CustomerBookAppointmentPage/>}/>
             <Route exact path="/dashboard" element={<CustomerDashboardPage/>}/>
             <Route exact path="/contact" element={<ContactPage/>}/>

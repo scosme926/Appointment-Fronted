@@ -47,7 +47,7 @@ class OwnerDashboardPage extends Component{
                 <td className="w3-center">9:30 AM</td>
                 <td className="w3-center">Hair Cut</td>
                 <td className="w3-center">
-                <Link to="/owner/appointment-detail/2">View <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <Link to="/owner-appointment-detail/2" style={{textDecoration:"none"}}>View <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </Link></td>
               </tr>
               <tr>

@@ -21,7 +21,7 @@ class OwnerAppointmentDetailPage extends Component{
       <>
           <div className="w3-row w3-black w3-top" style={{width:"100%"}}>
               <div className="w3-col s4 w3-container w3-padding">
-                  <Link to="/owner/dashboard" className="w3-btn w3-left"><i class="fa fa-arrow-left w3-xlarge"></i></Link>
+                  <Link to="/owner-dashboard" className="w3-btn w3-left"><i class="fa fa-arrow-left w3-xlarge"></i></Link>
                 </div>
 
               <div className="w3-col s4 w3-container w3-padding w3-center">
