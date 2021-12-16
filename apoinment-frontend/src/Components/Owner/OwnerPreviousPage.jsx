@@ -21,7 +21,7 @@ class OwnerPreviousPage extends Component{
       <>
           <h1>Owner previous Page</h1>
           <div className="w3-container w3-margin w3-border w3-round-large w3-border-black">
-            <table class="w3-table">
+            <table className="w3-table">
               <tr className="w3-border-bottom w3-border-black">
                 <th className="w3-center">Name</th>
                 <th className="w3-center">Date</th>

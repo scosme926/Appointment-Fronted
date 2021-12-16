@@ -12,7 +12,7 @@ class LoginContainer extends Component{
   constructor(props){
     super(props)
     this.state = {
-        "username": "",
+        "email": "",
         "password": "",
     };
     this.onLoginClick = this.onLoginClick.bind(this);
@@ -24,8 +24,15 @@ class LoginContainer extends Component{
 
   onPostLoginSuccess(res) {
       const token = res.data["token"];
-      console.log(token);
+      const first_name = res.data["first_name"];
+      const last_name = res.data["last_name"];
+      const email = res.data["email"];
+      console.log(res);
       localStorage.setItem("JWT_TOKEN", token);
+      localStorage.setItem("USER_FIRST_NAME", first_name);
+      localStorage.setItem("USER_LAST_NAME", last_name);
+      localStorage.setItem("USER_EMAIL", email);
+      window.location.href="/dashboard"
   }
 
 
@@ -53,9 +60,9 @@ class LoginContainer extends Component{
 
 
   onLoginClick(e) {
-      const { username, password } = this.state;
+      const { email, password } = this.state;
       const data = {
-          username: username,
+          email: email,
           password: password,
       };
       postLogin(data, this.onPostLoginSuccess, this.onPostLoginError, this.onPostLoginDone);
@@ -63,11 +70,11 @@ class LoginContainer extends Component{
 
 
   render(){
-    const { username, password } = this.state
+    const { email, password } = this.state
     return(
       <>
           <LoginComponent
-            username={username}
+            email={email}
             password={password}
             onTextChange={this.onTextChange}
             onLoginClick={this.onLoginClick}

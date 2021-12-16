@@ -1,5 +1,5 @@
 import axios from "axios"
-import { LOGIN_ENDPOINT } from "../constants"
+import { LOGIN_ENDPOINT,REGISTER_ENDPOINT } from "../constants"
 
 export function postLogin(data, onSuccefulCallBack, onErrorCallBack, doneCallBack){
     axios.post(LOGIN_ENDPOINT, data)
@@ -9,7 +9,7 @@ export function postLogin(data, onSuccefulCallBack, onErrorCallBack, doneCallBac
 }
 
 export function postRegister(data, onSuccefulCallBack, onErrorCallBack, doneCallBack){
-    axios.post(LOGIN_ENDPOINT, data)
+    axios.post(REGISTER_ENDPOINT, data)
   .then(onSuccefulCallBack)
   .catch(onErrorCallBack)
   .then(doneCallBack)

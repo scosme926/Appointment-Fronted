@@ -33,7 +33,7 @@ class OwnerDashboardPage extends Component{
           </div>
 
           <div className="w3-container w3-margin w3-border w3-round-large w3-border-black">
-            <table class="w3-table">
+            <table className="w3-table">
               <tr className="w3-border-bottom w3-border-black">
                 <th className="w3-center">Name</th>
                 <th className="w3-center">Date</th>
@@ -47,7 +47,7 @@ class OwnerDashboardPage extends Component{
                 <td className="w3-center">9:30 AM</td>
                 <td className="w3-center">Hair Cut</td>
                 <td className="w3-center">
-                <Link to="/owner-appointment-detail/2" style={{textDecoration:"none"}}>View <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <Link to="/owner-appointment-detail/2" style={{textDecoration:"none"}}>View <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </Link></td>
               </tr>
               <tr>

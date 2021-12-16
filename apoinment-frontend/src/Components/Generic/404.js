@@ -12,7 +12,7 @@ class NotFoundPage extends Component {
   render(){
     return(
       <>
-        <div class="row">
+        <div className="row">
         <h1>Not Found</h1>
         </div>
       </>

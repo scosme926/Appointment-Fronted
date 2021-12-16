@@ -39,14 +39,14 @@ class ContactPage extends Component{
 
           <div className="w3-container w3-margin w3-border w3-round-large w3-border-black">
               <h3>Connect With Us</h3>
-              <p><i class="w3-xlarge fa fa-envelope-o"></i>&nbsp;<a href="mailto:salonbeauty@gmail.com"> salonbeauty@gmail.com </a></p>
-              <p><i class="w3-xlarge fa fa-phone"></i>&nbsp;<a href="tel:+12266886455"> +1(226)-889-8973</a></p>
+              <p><i className="w3-xlarge fa fa-envelope-o"></i>&nbsp;<a href="mailto:salonbeauty@gmail.com"> salonbeauty@gmail.com </a></p>
+              <p><i className="w3-xlarge fa fa-phone"></i>&nbsp;<a href="tel:+12266886455"> +1(226)-889-8973</a></p>
           </div>
 
           <div className="w3-container w3-margin w3-border w3-round-large w3-border-black">
               <h3>Or Write Us</h3>
-              <div class="w3-rest w3-margin-bottom">
-                  <input class="w3-input w3-border" name="message" type="text" placeholder="Message" />
+              <div className="w3-rest w3-margin-bottom">
+                  <input className="w3-input w3-border" name="message" type="text" placeholder="Message" />
               </div>
           </div>
 
