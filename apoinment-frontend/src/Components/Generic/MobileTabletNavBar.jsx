@@ -9,11 +9,14 @@ export default function MobileTabletNavContainer(props) {
     const basePath = paths[1];
 
     const [isMoreClicked, setIsMoreClicked] = useState(false);
+    const isHidden = basePath === "" || basePath.includes("login") || basePath.includes("logout")  || basePath.includes("register");
+
     const [roleId, setRoleId] = useState(1)
 
 return (
     <>
       <br /><br /><br />
+      <div style={{display: isHidden ? "none" : "show"}}>
       {roleId ===1 &&
         <div className="w3-bar w3-black w3-border w3-bottom w3-xlarge" style={{width:"100%"}}>
           <div className="w3-bar-item w3-center" style={{width:"33%"}}>
@@ -47,6 +50,7 @@ return (
           </div>
         </div>
       }
+      </div>
     </>
   )
 }

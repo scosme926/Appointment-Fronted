@@ -1,7 +1,7 @@
 import axios from "axios";
 import { LIST_CREATE_APPOINTMENT } from "../constants"
 
-export function getAppointment(data, onSuccefulCallBack, onErrorCallBack, doneCallBack){
+export function getAppointmentList(onSuccefulCallBack, onErrorCallBack, doneCallBack){
   axios.get(LIST_CREATE_APPOINTMENT)
   .then(onSuccefulCallBack)
   .catch(onErrorCallBack)

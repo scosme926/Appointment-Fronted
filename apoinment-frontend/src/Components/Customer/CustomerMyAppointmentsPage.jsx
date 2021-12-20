@@ -6,19 +6,42 @@ import {
   Link,
 } from "react-router-dom";
 import CustomHR from "../Elements/customhr"
-
-
+import { getAppointmentList } from "../../API/appointment"
 
 
 class CustomerMyAppointmentsPage extends Component{
   constructor(props){
     super(props)
     this.state = {
-
+      appointments:[],
     };
+    this.onSuccessCallback = this.onSuccessCallback.bind(this);
+    this.onErrorCallBack = this.onErrorCallBack.bind(this);
+    this.onDoneCallback = this.onDoneCallback.bind(this);
   }
 
+  onSuccessCallback(response){
+    console.log(response)
+    this.setState({
+      appointments:response.data["results"]
+    })
+  }
+
+  onErrorCallBack(error){
+
+  }
+
+  onDoneCallback(){
+
+  }
+
+  componentDidMount(){
+    getAppointmentList(this.onSuccessCallback, this.onErrorCallBack, this.onDoneCallback)
+  }
+
+
   render(){
+    const { appointments } = this.state;
     return(
       <>
           <div className="w3-row w3-black" style={{width:"100%"}}>
@@ -35,41 +58,33 @@ class CustomerMyAppointmentsPage extends Component{
           </div>
 
           <div className="w3-container w3-padding">
-              <h2>Upcoming</h2>
+              <h2>My Appointments</h2>
           </div>
-
-          <div className="w3-container w3-margin w3-border w3-round-large w3-border-black">
-              <div className="w3-container w3-cell w3-cell-middle w3-center w3-padding" style={{width:"33%"}}>
-                  <span className="w3-center">Tuesday<br /> 18 <br /> Nov</span>
-              </div>
-
-              <div className="w3-container w3-cell w3-cell-bottom w3-padding-16 w3-border-left w3-border-black w3-center" style={{width:"38%"}}>
-                  <p>Blow-Drying</p>
-              </div>
-
-              <div className="w3-container w3-cell w3-cell-bottom w3-padding w3-center" style={{width:"28%"}}>
-                  <p>10:00 AM</p>
-              </div>
-          </div>
+          <div>
 
           <div className="w3-padding">
           <CustomHR />
-          </div>
 
+          </div>
+          {appointments.map((appointment) => (
+            <>
           <div className="w3-row w3-padding w3-margin w3-border w3-round-large w3-border-black">
               <div className="w3-col s3 w3-center">
-                  <span>Tuesday<br /> 18 <br /> Nov</span>
+                  <span>{appointment.date_time}<br /> 18 <br /> Nov</span>
               </div>
 
               <div className="w3-col s6 w3-center">
                 <div className="w3-border-left w3-border-black w3-center">
-                    <span className="w3-padding w3-panel">Blow-Drying</span>
+                    <span className="w3-padding w3-panel">{appointment.services}</span>
                 </div>
               </div>
 
               <div className="w3-col s3 w3-center">
-                  <br /><span className="w3-pane">10:00 AM</span>
+                  <br /><span className="w3-pane">10:00 AM<br /> Status:{appointment.decision}</span>
               </div>
+          </div>
+          </>
+                ))}
           </div>
 
 

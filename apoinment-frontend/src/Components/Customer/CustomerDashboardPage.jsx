@@ -22,6 +22,7 @@ class CustomerDashboardPage extends Component{
         </div>
         <div className="w3-hide-large">
           <div className="w3-panel">
+          <Link to="/login" className="w3-btn w3-right"><i className="fa fa-sign-out w3-xlarge"></i></Link>
             <h4 style={{height:"15px"}}>Hello,&nbsp;{name}</h4>
             <h2 >Welcome</h2>
           </div>

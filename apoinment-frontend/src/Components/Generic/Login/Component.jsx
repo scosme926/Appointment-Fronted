@@ -6,7 +6,7 @@ export default function LoginComponent(props){
     <>
         <div className="w3-container w3-margin-bottom w3-center">
             <br /><br />
-            <img src="/img/salon-logo3.png" style={{width:"70%"}}/>
+            <img src="/img/salon-logo2.png" style={{width:"70%"}}/>
         </div>
 
         <div className="w3-container">
@@ -24,7 +24,9 @@ export default function LoginComponent(props){
                     <button className="w3-btn w3-black w3-block w3-margin-bottom" onClick={onLoginClick} >Login</button>
                 </p>
           </div>
-          <Link to="/register" className="w3-btn w3-light-grey w3-block">Register</Link>
+          <div className="w3-center">
+          <p>Don't have an account? <Link to="/register">Click here</Link> to register a new account!</p>
+          </div>
         </div>
     </>
   )

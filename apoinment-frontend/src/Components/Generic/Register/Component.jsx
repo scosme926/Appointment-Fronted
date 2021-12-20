@@ -34,8 +34,8 @@ export default function RegisterComponent(props){
                 </p>
                 <p className="w3-text-black">
                     <button className="w3-btn w3-black w3-block w3-margin-bottom" onClick={onSubmitClick}>Register</button>
-                    <Link to="/login" className="w3-btn w3-black w3-block">Log in</Link>
                 </p>
+                <p>Already have an account? <Link to="/login">Click here</Link> to login now.</p>
             </div>
        </div>
     </>
